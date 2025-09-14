@@ -1,14 +1,11 @@
-import express from "express";
+import { neon } from "@neondatabase/serverless";
 import dotenv from "dotenv";
-import { sql } from "./config/db.js";
 
 dotenv.config();
 
-const app = express();
+export const sql = neon(process.env.DATABASE_URL);
 
-const PORT = process.env.PORT || 5001;
-
-async function initDB() {
+export async function initDB() {
   try {
     await sql`CREATE TABLE IF NOT EXISTS transactions(
            id SERIAL PRIMARY KEY,
@@ -24,9 +21,3 @@ async function initDB() {
     process.exit(1);
   }
 }
-
-initDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Server is running on port: ${PORT}`);
-  });
-});
