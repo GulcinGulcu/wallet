@@ -1,0 +1,1 @@
+export const API_URL = "https://wallet-api-n6zg.onrender.com/api/transactions";
