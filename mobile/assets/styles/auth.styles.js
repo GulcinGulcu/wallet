@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     width: 300,
     height: 310,
     resizeMode: "contain",
+    marginInline: "auto"
   },
   title: {
     fontSize: 32,
