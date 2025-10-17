@@ -27,4 +27,4 @@ A **cross-platform (iOS/Android) expense tracker** built with **React Native** a
 - [Express](https://expressjs.com/) REST API  
 - [Postgres](https://neon.tech/) (Neon-hosted)  
 - [Redis](https://redis.io/) for rate limiting  
-- Deployed on free cloud services (e.g., Render / Railway / Fly.io)
+- Deployed on free cloud services Render
